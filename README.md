@@ -25,6 +25,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # 目录结构
 
+```
 ├── build                      # 构建相关
 ├── public                     # 静态资源
 │   │── favicon.ico            # favicon图标
@@ -51,4 +52,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├── postcss.config.js          # postcss 配置
 |—— jsconfig.json              # jsconfig.json
 └── package.json               # package.json
+```
 
