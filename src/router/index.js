@@ -3,11 +3,20 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+import Layout from '@/layout/indexPage.vue'
+
 const routes = [
   {
     path: '/',
-    name: 'Layout',
-    component: () => import('@/layout/indexPage.vue')
+    component: Layout,
+    redirect: '/dashboardPage',
+    children: [
+      {
+        path: '/dashboardPage',
+        name: 'DashboardPage',
+        component: () => import('@/views/dashboardPage.vue')
+      }
+    ]
   }
 ]
 

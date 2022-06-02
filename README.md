@@ -53,4 +53,3 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 |—— jsconfig.json              # jsconfig.json
 └── package.json               # package.json
 ```
-
