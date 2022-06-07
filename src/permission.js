@@ -9,7 +9,6 @@ NProgress.configure({ showSpinner: false });
 const whiteList = ['/login'];
 
 router.beforeEach(async(to, from, next) => {
-    console.log(to.path, from)
     NProgress.start();
 
     const hasToken = getToken();

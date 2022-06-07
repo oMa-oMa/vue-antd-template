@@ -13,10 +13,18 @@ const getDefaultState = () => {
 const state = getDefaultState();
 
 const mutations = {
-    reset_state: (state) => Object.assign(state, getDefaultState()),
-    set_token: (state, token) => state.token = token,
-    set_name: (state, name) => state.name = name,
-    set_avater: (state, avatar) => state.avatar = avatar 
+    reset_state(state) {
+        Object.assign(state, getDefaultState())
+    },
+    set_token(state, token) {
+        state.token = token
+    },
+    set_name(state, name) {
+        state.name = name
+    },
+    set_avatar(state, avatar) {
+        state.avatar = avatar 
+    }
 }
 
 const actions = {
@@ -41,7 +49,6 @@ const actions = {
                 if (!data) {
                     return reject('验证失败，请重新登录！');
                 }
-
                 const { name, avatar } = data;
                 commit('set_name', name);
                 commit('set_avatar', avatar);

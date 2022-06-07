@@ -28,7 +28,7 @@ service.interceptors.response.use(
 
     response => {
         const res = response.data;
-        if (res.code !== 200) {
+        if (res.code !== 20000) {
             message.error( res.message || 'Error');
             return Promise.reject(new Error(res.message || 'Error'));
         }

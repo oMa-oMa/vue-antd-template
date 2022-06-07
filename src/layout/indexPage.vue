@@ -8,7 +8,7 @@
         <head-bar @changeCollapse="changeCollapse" />
       </a-layout-header>
       <a-layout-content
-        :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }"
+        :style="{ margin: '5px 5px', padding: '24px', background: '#fff', minHeight: '280px' }"
       >
         <app-main />
       </a-layout-content>
@@ -42,6 +42,18 @@ export default {
 </script>
 
 <style lang="less">
+#header-bar {
+  position: relative;
+  .avatar {
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 24px;
+  }
+}
 #components-layout-demo-custom-trigger {
   height: 100vh;
   .trigger {
