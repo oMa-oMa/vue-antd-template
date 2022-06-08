@@ -32,7 +32,6 @@ export default {
   },
   created() {
     this.list = this.$router.options.routes[2].children;
-    console.log(this.list)
   },
   methods: {
     handelClick(item) {

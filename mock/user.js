@@ -61,7 +61,6 @@ module.exports = [
         type: 'post',
         response: config => {
             const { token } = JSON.parse(config.body);
-            console.log(config)
             if (token) {
                 return {
                     code: 20000,
