@@ -72,7 +72,7 @@ export default {
         if (!err) {
           this.loading = true;
           this.login(values).then(async() => {
-            await this.$router.push({path: this.redirect || '/'});
+            await this.$router.push({path: '/'});
             this.loading = false;
           }).catch(err => {
             console.log(err);

@@ -1,11 +1,12 @@
 const Mock = require("mockjs");
 const user = require("./user");
+const router = require('./router');
 
 Mock.setup({
   timeout: "200-600",
 });
 
-const mockData = [...user];
+const mockData = [...user, ...router];
 
 mockData.forEach((item) => {
   Mock.mock(

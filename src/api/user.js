@@ -23,3 +23,10 @@ export function logout(token) {
         data: { token }
     })
 }
+
+export function routerList() {
+    return request({
+        url: '/routerList',
+        method: 'get'
+    })
+}

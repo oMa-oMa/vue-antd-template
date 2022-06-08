@@ -1,50 +1,43 @@
 <template>
   <div>
     <div class="logo">
-        <span v-show="logo">XXX后台管理</span>
-        <span v-show="!logo">logo</span>
+      <span v-show="logo">XXX后台管理</span>
+      <span v-show="!logo">logo</span>
     </div>
-    <a-menu theme="dark" :default-selected-keys="['1']" mode="inline">
-      <a-menu-item key="1">
-        <a-icon type="pie-chart" />
-        <span>Option 1</span>
+    <a-menu theme="dark" :selectedKeys="[$route.path]" @click="handelClick" mode="inline" v-for="item in list" :key="item.name">
+      
+      <a-menu-item v-if="!item.children" :key="item.path">
+        <a-icon :type="item.meta.icon" />
+        <span>{{ item.meta.title }}</span>
       </a-menu-item>
-      <a-menu-item key="2">
-        <a-icon type="desktop" />
-        <span>Option 2</span>
-      </a-menu-item>
-      <a-sub-menu key="sub1">
+      <a-sub-menu v-else :key="item.path">
         <span slot="title">
-          <a-icon type="user" />
-          <span>User</span>
+          <a-icon :type="item.meta.icon" />
+          <span>{{item.meta.title }}</span>
         </span>
-        <a-menu-item key="3">Tom</a-menu-item>
-        <a-menu-item key="4">Bill</a-menu-item>
-        <a-menu-item key="5">Alex</a-menu-item>
+        <a-menu-item v-for="citem in item.children" :key="citem.path">{{ citem.meta.title }}</a-menu-item>
       </a-sub-menu>
-      <a-sub-menu key="sub2">
-        <span slot="title">
-          <a-icon type="team" />
-          <span>Team</span>
-        </span>
-        <a-menu-item key="6">Team 1</a-menu-item>
-        <a-menu-item key="8">Team 2</a-menu-item>
-      </a-sub-menu>
-      <a-menu-item key="9">
-        <a-icon type="file" />
-        <span>File</span>
-      </a-menu-item>
     </a-menu>
   </div>
 </template>
 
 <script>
 export default {
-    props: {
-        logo: {
-            type: Boolean,
-            return: true
-        }
+  props: {
+    logo: {
+      type: Boolean,
+      return: true,
+      list: []
     }
-}
+  },
+  created() {
+    this.list = this.$router.options.routes[2].children;
+    console.log(this.list)
+  },
+  methods: {
+    handelClick(item) {
+      this.$router.push(item.key);
+    }
+  }
+};
 </script>

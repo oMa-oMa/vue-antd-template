@@ -27,6 +27,9 @@ export default {
     message() {
       return 'The webmaster said that you can not enter this page...'
     }
+  },
+  methods() {
+    console.log(this.$route,99)
   }
 }
 </script>
@@ -35,8 +38,8 @@ export default {
 .wscn-http404-container{
   transform: translate(-50%,-50%);
   position: absolute;
-  top: 40%;
   left: 50%;
+  margin-top: 20%;
 }
 .wscn-http404 {
   position: relative;

@@ -53,6 +53,11 @@ export default {
     margin: auto;
     right: 24px;
   }
+  .breadcrumb {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+  }
 }
 #components-layout-demo-custom-trigger {
   height: 100vh;
