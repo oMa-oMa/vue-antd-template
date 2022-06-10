@@ -20,9 +20,6 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 # 目录结构
 
 ```
@@ -52,4 +49,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├── postcss.config.js          # postcss 配置
 |—— jsconfig.json              # jsconfig.json
 └── package.json               # package.json
+```
+
+# 打包问题
+```
+dist文件本地运行会出现跨域问题
+解决方案：
+    vscode 下载 Live Server 插件进行运行
 ```
