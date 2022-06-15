@@ -23,7 +23,6 @@ npm run lint
 # 目录结构
 
 ```
-├── build                      # 构建相关
 ├── public                     # 静态资源
 │   │── favicon.ico            # favicon图标
 │   └── index.html             # html模板
@@ -43,7 +42,6 @@ npm run lint
 │   ├── main.js                # 入口文件 加载组件 初始化等
 │   └── permission.js          # 权限管理
 ├── .env.xxx                   # 环境变量配置
-├── .eslintrc.js               # eslint 配置项
 ├── babel.config.js            # babel-loader 配置
 ├── vue.config.js              # vue-cli 配置
 ├── postcss.config.js          # postcss 配置
