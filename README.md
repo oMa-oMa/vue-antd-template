@@ -1,4 +1,4 @@
-# vue-antd-template
+# vue2-antd-template
 
 ## Project setup
 ```
